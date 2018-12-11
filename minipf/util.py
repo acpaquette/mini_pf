@@ -7,7 +7,7 @@ import numpy as np
 from glob import glob
 from os import path
 from itertools import groupby, filterfalse
-from mini_pf import config
+from minipf import config
 
 
 

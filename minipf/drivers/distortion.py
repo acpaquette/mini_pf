@@ -1,7 +1,7 @@
 from abc import ABC
 import spiceypy as spice
 
-from mini_pf.models.optical_distortion_transverse import OpticalDistortionTransverse
+from minipf.models.optical_distortion_transverse import OpticalDistortionTransverse
 
 
 class TransverseDistortion(ABC):

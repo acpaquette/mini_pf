@@ -3,7 +3,7 @@ import pprint
 import six
 import typing
 
-from mini_pf import util
+from minipf import util
 
 T = typing.TypeVar('T')
 

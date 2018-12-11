@@ -5,16 +5,16 @@ from datetime import date, datetime  # noqa: F401
 
 from typing import List, Dict  # noqa: F401
 
-from mini_pf.models.base_model_ import Model
-from mini_pf.models.isd200_detector_center import ISD200DetectorCenter  # noqa: F401,E501
-from mini_pf.models.isd200_focal_length_model import ISD200FocalLengthModel  # noqa: F401,E501
-from mini_pf.models.isd200_radii import ISD200Radii  # noqa: F401,E501
-from mini_pf.models.isd200_reference_height import ISD200ReferenceHeight  # noqa: F401,E501
-from mini_pf.models.isd200_sensor_position import ISD200SensorPosition  # noqa: F401,E501
-from mini_pf.models.isd200_sun_position import ISD200SunPosition  # noqa: F401,E501
-from mini_pf.models.optical_distortion import OpticalDistortion  # noqa: F401,E501
-from mini_pf.models.quaternions import Quaternions  # noqa: F401,E501
-from mini_pf import util
+from minipf.models.base_model_ import Model
+from minipf.models.isd200_detector_center import ISD200DetectorCenter  # noqa: F401,E501
+from minipf.models.isd200_focal_length_model import ISD200FocalLengthModel  # noqa: F401,E501
+from minipf.models.isd200_radii import ISD200Radii  # noqa: F401,E501
+from minipf.models.isd200_reference_height import ISD200ReferenceHeight  # noqa: F401,E501
+from minipf.models.isd200_sensor_position import ISD200SensorPosition  # noqa: F401,E501
+from minipf.models.isd200_sun_position import ISD200SunPosition  # noqa: F401,E501
+from minipf.models.optical_distortion import OpticalDistortion  # noqa: F401,E501
+from minipf.models.quaternions import Quaternions  # noqa: F401,E501
+from minipf import util
 
 
 class ISD200(Model):

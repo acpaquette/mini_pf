@@ -4,10 +4,10 @@ import os
 import numpy as np
 import pvl
 import spiceypy as spice
-from mini_pf import config
+from minipf import config
 
-from mini_pf.drivers.base import LineScanner
-from mini_pf.drivers.distortion import RadialDistortion
+from minipf.drivers.base import LineScanner
+from minipf.drivers.distortion import RadialDistortion
 
 class MRO_CTX(LineScanner, RadialDistortion):
     id_lookup = {

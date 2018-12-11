@@ -1,13 +1,13 @@
-import connexion
-import six
+# import connexion
+# import six
 
-# from mini_pf.models.data import Data  # noqa: E501
-# from mini_pf.models.isd200 import ISD200  # noqa: E501
-# from mini_pf.models.request_isd import RequestISD  # noqa: E501
-from mini_pf import util
-from mini_pf import drivers
+# from minipf.models.data import Data  # noqa: E501
+# from minipf.models.isd200 import ISD200  # noqa: E501
+# from minipf.models.request_isd import RequestISD  # noqa: E501
+from minipf import util
+from minipf import drivers
 
-def create_isd():  # noqa: E501
+def create_isd(lbl_file):  # noqa: E501
     """Converts Image Labels to ISDs
 
     Adds an item to the system # noqa: E501
@@ -17,11 +17,10 @@ def create_isd():  # noqa: E501
 
     :rtype: ISD200
     """
-    # if connexion.request.is_json:
-    #     request_isd = RequestISD.from_dict(connexion.request.get_json())  # noqa: E501
-    #
-    # app.logger.info("Post Request: {}".format(request_isd))
-    return drivers.load(request_isd.label)
+    with open(lbl_file, "r") as fp:
+        lines = fp.read()
+
+    return drivers.load(lines)
 
 def get_metakernel(mission, year, version):  # noqa: E501
     """Get a specific kernel
@@ -52,3 +51,6 @@ def metakernel_catalog():  # noqa: E501
     :rtype: Data
     """
     return 'do some magic!'
+
+if __name__ == "__main__":
+    print("Banana")

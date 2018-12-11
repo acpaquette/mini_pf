@@ -5,8 +5,8 @@ import numpy as np
 import pvl
 import spiceypy as spice
 
-from mini_pf.drivers import distortion
-from mini_pf.models.isd200 import ISD200
+from minipf.drivers import distortion
+from minipf.models.isd200 import ISD200
 
 class Base(ABC):
     """
@@ -27,6 +27,7 @@ class Base(ABC):
         Called when the context is created. This is used
         to get the kernels furnished.
         """
+        print("IN FURNISH")
         if self.metakernel:
             spice.furnsh(self.metakernel)
         return self
@@ -54,10 +55,10 @@ class Base(ABC):
 
     def to_pfeffer_response(self):
         """
-        Parse the data into a valid mini_pf response
+        Parse the data into a valid minipf response
         """
         data = self.to_dict()
-        # Take the flat reponse and create the mini_pf obj dicts
+        # Take the flat reponse and create the minipf obj dicts
         data['detector_center'] = {'line': data['detector_center'][0],
                                 'sample': data['detector_center'][1]}
 

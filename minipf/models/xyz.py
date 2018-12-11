@@ -5,8 +5,8 @@ from datetime import date, datetime  # noqa: F401
 
 from typing import List, Dict  # noqa: F401
 
-from mini_pf.models.base_model_ import Model
-from mini_pf import util
+from minipf.models.base_model_ import Model
+from minipf import util
 
 
 class XYZ(Model):
